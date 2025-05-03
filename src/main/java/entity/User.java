@@ -1,3 +1,7 @@
+package entity;
+
+import constant.UserRole;
+
 public class User
     {
         private String id;

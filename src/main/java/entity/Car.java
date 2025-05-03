@@ -1,3 +1,5 @@
+package entity;
+
 public class Car
     {
         private static int lastId = 0;
@@ -83,7 +85,7 @@ public class Car
         @Override
         public String toString()
             {
-                return "Car{" +
+                return "entity.Car{" +
                         "id=" + id +
                         ", brand='" + brand + '\'' +
                         ", model='" + model + '\'' +
