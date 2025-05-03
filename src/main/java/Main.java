@@ -56,7 +56,53 @@ public class Main
 
                                 case "3":
                                 System.out.println("изменения");
-                                break;
+                                System.out.println("Выберите, какое авто изменить по ID");
+                                int id = Integer.parseInt(scanner.next());
+                                Car currentCar = carList.get(id);
+                                System.out.println("Выберите, что менять: марка,модель,цвет,количество,цена");
+
+                                    String ch = scanner.next();
+                                switch (ch)
+                                    {
+                                        case "марка":
+                                            System.out.println("Введите марку");
+                                            currentCar.setBrand(scanner.next());
+
+                                            break;
+                                        case "модель":
+
+                                            System.out.println("Введите модель");
+                                            currentCar.setModel(scanner.next());
+                                            break;
+
+                                        case "цвет":
+                                            System.out.println("Введите цвет");
+                                            currentCar.setColor(scanner.next());
+
+                                            break;
+
+                                        case "количество":
+                                            System.out.println("Введите колличество");
+                                            currentCar.setQuantity(Integer.parseInt(scanner.next()));
+
+                                            break;
+                                        case "цена":
+                                            System.out.println("Введите цену");
+                                            currentCar.setPrice(Double.parseDouble(scanner.next()));
+
+                                            break;
+
+                                    }
+                                    break;
+
+                                case "4":
+                                    System.out.println("удаление");
+                                    System.out.println("Выберите, какое авто удалить по ID");
+                                    int id2 = Integer.parseInt(scanner.next());
+                                    Car currentCar2 = carList.remove(id2);
+
+
+
                         }
 
                 }

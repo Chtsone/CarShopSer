@@ -1,11 +1,18 @@
 public class Car
     {
         private static int lastId = 0;
-        private int id;
         private String brand;
         private String model;
         private String color;
+        private int id;
+
         private int quantity;
+
+        public int getId()
+            {
+                return id;
+            }
+
         private double price;
 
         public Car( String brand, String model, String color, int quantity, double price)
@@ -15,13 +22,12 @@ public class Car
                 this.color = color;
                 this.quantity = quantity;
                 this.price = price;
-                lastId++;
+                this.id = ++lastId;
             }
 
-        public void setId(int id)
-            {
-                this.id = id;
-            }
+
+
+
 
         public void setBrand(String brand)
             {
@@ -48,10 +54,6 @@ public class Car
                 this.price = price;
             }
 
-        public int getId()
-            {
-                return id;
-            }
 
         public String getBrand()
             {
