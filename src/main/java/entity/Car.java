@@ -1,11 +1,13 @@
 package entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class Car
     {
-        private static int lastId = 0;
         private String brand;
         private String model;
         private String color;
@@ -16,19 +18,24 @@ public class Car
 
         private double price;
 
-        public Car( String brand, String model, String color, int quantity, double price)
+        public Car(String brand, String model, String color, int quantity, double price)
             {
                 this.brand = brand;
                 this.model = model;
                 this.color = color;
                 this.quantity = quantity;
                 this.price = price;
-                this.id = ++lastId;
             }
 
-
-
-
+        public Car(int id, String brand, String model, String color, int quantity, double price)
+            {
+                this.brand = brand;
+                this.model = model;
+                this.color = color;
+                this.quantity = quantity;
+                this.price = price;
+                this.id = id;
+            }
 
 
         @Override
