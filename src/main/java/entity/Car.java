@@ -1,5 +1,8 @@
 package entity;
 
+import lombok.Data;
+
+@Data
 public class Car
     {
         private static int lastId = 0;
@@ -10,10 +13,6 @@ public class Car
 
         private int quantity;
 
-        public int getId()
-            {
-                return id;
-            }
 
         private double price;
 
@@ -31,56 +30,6 @@ public class Car
 
 
 
-        public void setBrand(String brand)
-            {
-                this.brand = brand;
-            }
-
-        public void setModel(String model)
-            {
-                this.model = model;
-            }
-
-        public void setColor(String color)
-            {
-                this.color = color;
-            }
-
-        public void setQuantity(int quantity)
-            {
-                this.quantity = quantity;
-            }
-
-        public void setPrice(double price)
-            {
-                this.price = price;
-            }
-
-
-        public String getBrand()
-            {
-                return brand;
-            }
-
-        public String getModel()
-            {
-                return model;
-            }
-
-        public String getColor()
-            {
-                return color;
-            }
-
-        public int getQuantity()
-            {
-                return quantity;
-            }
-
-        public double getPrice()
-            {
-                return price;
-            }
 
         @Override
         public String toString()
