@@ -1,12 +1,33 @@
 package entity;
 
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+@Data
 public class Order
     {
-        private String id;
-        private User customer;
-        private Car car;
+        private int id;
+        private String nameUser;
+        private int idCar;
         private LocalDate orderDate;
-        private Boolean status;
+        private String status;
+
+        public Order(String nameUser, int idCar, LocalDate orderDate, String status)
+            {
+                this.nameUser = nameUser;
+                this.idCar = idCar;
+                this.orderDate = orderDate;
+                this.status = status;
+            }
+
+        public Order(int id, String nameUser, int idCar, LocalDate orderDate, String status)
+            {
+                this.id = id;
+                this.nameUser = nameUser;
+                this.idCar = idCar;
+                this.orderDate = orderDate;
+                this.status = status;
+            }
     }

@@ -12,5 +12,7 @@ public interface CarService
 
         Car save(Car car);
 
+        void update(int id, Car car);
+
         void deleteById(int id);
     }

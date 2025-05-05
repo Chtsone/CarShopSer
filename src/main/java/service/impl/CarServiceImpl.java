@@ -39,6 +39,14 @@ public class CarServiceImpl implements CarService
             }
 
         @Override
+        public void update(int id, Car car)
+            {
+                Car byId = carRepository.findById(id);
+                if(byId == null) throw new RuntimeException("Машины нет");
+                carRepository.update(id, car);
+            }
+
+        @Override
         public void deleteById(int id)
             {
                 Car byId = carRepository.findById(id);

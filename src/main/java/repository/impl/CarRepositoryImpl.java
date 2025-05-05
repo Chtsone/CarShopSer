@@ -12,7 +12,7 @@ public class CarRepositoryImpl implements CarRepository
     {
         private CarDataBase cars;
         private Sequence sequence;
-        private CarMapper carMapper; //мапперы преобразует, почитай про мапперы
+        private CarMapper carMapper;
 
         public CarRepositoryImpl(CarDataBase cars, Sequence sequence, CarMapper carMapper)
             {
@@ -36,11 +36,19 @@ public class CarRepositoryImpl implements CarRepository
         @Override
         public Car save(Car car)
             {
-                //int next = sequence.next();
-                //carMapper.fillId(car,next);                    //нужен для сохраниния солида
+                int next = sequence.next();
+                carMapper.fillId(car,next);                     //вернул работоспособность добавления, придется для апдейта добавить свое
                 cars.getCars().put(car.getId(), car);
                 return car;
             }
+
+        @Override
+        public void update(int id, Car car)
+            {
+                cars.getCars().put(id, car);
+            }
+
+
 
         @Override
         public void deleteById(int id)

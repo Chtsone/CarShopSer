@@ -2,9 +2,9 @@ package sequence.impl;
 
 import sequence.Sequence;
 
-public class CarSequence implements Sequence
+public class OrderSequence implements Sequence
     {
-        private static int counter;
+        private int counter;
         @Override
         public int next()
             {

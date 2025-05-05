@@ -32,6 +32,10 @@ public class CarController
                 return carService.save(car);
             }
 
+        public void update(int id, Car car)
+            {
+                carService.update(id, car);
+            }
         public void deleteById(int id)
             {
                 carService.deleteById(id);

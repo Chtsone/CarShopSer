@@ -79,7 +79,7 @@ public class View
 
 
                                  car = new Car(id,brand, model, color, quantity, price);
-                                carController.save(car);
+                                carController.update(id,car);
                                 break;
 
                             case "4":
