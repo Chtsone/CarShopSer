@@ -2,12 +2,12 @@ package sequence.impl;
 
 import sequence.Sequence;
 
-public class OrderSequence implements Sequence
+public class UserSequence implements Sequence
     {
-        private static int counter;
+        private static int count;
         @Override
         public int next()
             {
-                return counter++;
+                return count++;
             }
     }
