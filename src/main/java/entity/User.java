@@ -14,7 +14,7 @@ public class User
                 this.role = role;
             }
 
-        public User(String id, String username, String password, UserRole role)
+        public User(int id, String username, String password, UserRole role)
             {
                 this.id = id;
                 this.username = username;
@@ -22,7 +22,7 @@ public class User
                 this.role = role;
             }
 
-        private String id;
+        private int id;
         private String username;
         private String password;
         private UserRole role;
