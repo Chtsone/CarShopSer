@@ -25,7 +25,9 @@ public class UserDataBaseImpl implements UserDataBase
                 for(int i = 0; i < 100;i++)
                     {
                         User user = new User("User %d".formatted(i),"Password %d".formatted(i), UserRole.CLIENT );
-
+                        int id = sequence.next();
+                        userMapper.fillId(user,id);
+                        users.put(user.getId(),user);
                     }
 
             }
